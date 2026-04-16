@@ -1,8 +1,8 @@
 # wechat-export
 
-微信聊天记录导出工具（macOS）
+微信聊天记录导出工具 (macOS) • Pure Go, no CGo dependency. Agentic development assisted by Claude Code.
 
-纯 Go 实现，无 CGo 依赖，支持导出为 JSON / CSV / HTML 三种格式。
+Export WeChat chat history to JSON / CSV / HTML formats for backup or AI analysis.
 
 ## 功能特性
 
@@ -77,6 +77,7 @@ wechat-export --help
 ### 数据库加密说明
 
 macOS 微信使用 **SQLCipher 4** 加密本地数据库：
+
 - 加密算法：AES-256-CBC
 - 密钥派生函数：PBKDF2-SHA512，256000 次迭代
 - 数据库路径：`~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/[版本]/[uuid]/Message/*.db`
@@ -84,6 +85,7 @@ macOS 微信使用 **SQLCipher 4** 加密本地数据库：
 ### 密钥获取
 
 密钥提取需要读取微信进程内存，这涉及到操作系统级的操作，推荐使用专门的密钥提取工具：
+
 - [Thearas/wechat-db-decrypt-macos](https://github.com/Thearas/wechat-db-decrypt-macos)
 - [cocohahaha/wechat-decrypt-macos](https://github.com/cocohahaha/wechat-decrypt-macos)
 
